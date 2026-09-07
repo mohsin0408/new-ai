@@ -1,5 +1,5 @@
-const apiKey = "AIzaSyDwnibzP9tF5ntvQO8Y4TPY46mqBDgyqh8";
-const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const apiUrl = `${import.meta.env.VITE_GEMINI_API_URL}key=${apiKey}`;
 
 const GeminiApi = async (message) => {
   if (!apiKey) {
